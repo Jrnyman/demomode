@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+	<head>
+	  <base href="../../">
+		<link rel="stylesheet" href="assets/style.css"/>
+	</head>
+	<body >
+		<h1 style="text-align: center; font-size: 50px;">
+			<span style="transform:scale(0.85);">
+				<span class="key"><i>~</i></span>
+				+
+				<span class="key" style="width:200px;"><i>shift</i></span>
+			</span>
+			extra menu
+		</h1>
+		<div class="not row center">
+			<div style="display: flex; justify-content: center;">
+				<div class="not row center">
+					<h2 style="padding-right:30px;">primary</h2>
+					<INPUT type="text" id="customPrimary" style="height: 30px;"/>
+				</div>
+				<div class="not row center">
+					<h2 style="padding-right:30px;">secondary</h2>
+					<INPUT type="text" id="customSecondary" style="height: 30px;"/>
+				</div>
+				<div class="not row center">
+					<h2 style="padding-right:30px;">splash</h2>
+					<INPUT type="text" id="customSplash" style="height: 30px;"/>
+				</div>
+
+			</div>
+			<div class="row center">
+				<input type="BUTTON" id="alrighty" style="max-width: 90px;" />
+				<input type="BUTTON" id="reboot" style="max-width: 90px;" />
+			</div>
+		</div>
+		<script src="assets/js/theme.js"></script>
+		<script>
+			localStorage.setItem("theme", false); 
+			usersays.ok.onclick = function(){
+				rootget.style.setProperty('--white', usersays.primary.value);
+				rootget.style.setProperty('--black', usersays.secondary.value);
+				rootget.style.setProperty('--splash', usersays.splash.value);
+
+				localStorage.setItem("localW", usersays.primary.value); 
+				localStorage.setItem("localB", usersays.secondary.value);
+				localStorage.setItem("localS", usersays.splash.value);
+				local.ready = true;
+			};
+			
+		</script>
+	</body>
+</html>
